@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>introducao de imagens</title>
+    <meta charset="UTF-8">
+    <script>
+      function draw(){
+        var canvas = document.getElementById('meuCanvas');
+        if (canvas.getContext){
+          var cntxt = canvas.getContext('2d');
+
+          /***** IMAGEM *****/
+          var imagem = document.getElementById('teste');
+          cntxt.drawImage(imagem, 10,10);
+
+        }
+      }
+
+
+    </script>
+      
+  </head>
+  <body onload="draw();">
+    <img src="imagens/imagem.webp" id="teste" style="display: none;">
+    <canvas id="meuCanvas" width="700px" height="700px" style="border:1px solid #000000;"></canvas>
+  </body>
+</html>
